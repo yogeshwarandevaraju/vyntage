@@ -158,8 +158,8 @@ body {
 .hero-section {
   padding: 80px 0 60px;
   /* background-color: var(--bg-section); */
-/* background-image: url('images/best-event-management-company-in-chennai.webp'); */
-background-image: url('images/best-event-management-company-in-chennai.jpg');
+ background-image: url('images/best-event-management-company-in-chennai.webp');
+/* background-image: url('images/best-event-management-company-in-chennai.jpg'); */
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
