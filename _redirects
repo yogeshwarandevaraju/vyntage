@@ -1,0 +1,3 @@
+# Force HTTPS + remove www
+http://* https://vyntage.in/:splat 301
+https://www.vyntage.in/* https://vyntage.in/:splat 301
