@@ -2669,8 +2669,8 @@ background-attachment: fixed;
       position: absolute;
       top: 16px;
       left: 16px;
-      background-color: var(--text-heading);
-      color: #fff;
+      background-color: var(--bg-primary);
+      color: var(--text-heading);
       font-family: 'Lato', sans-serif;
       font-size: 0.65rem;
       font-weight: 700;
@@ -3054,3 +3054,144 @@ html, body {
 }
 
 /* Services Marquee Strip Ends */
+
+
+/* ==================================================
+   VYNTAGE PREMIUM SERVICES CARDS
+================================================== */
+
+.services-grid-new{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:50px;
+}
+
+.event-card{
+    background:#fff;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,0.12);
+    transition:all .35s ease;
+    position:relative;
+}
+
+.event-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 40px rgba(0,0,0,0.18);
+}
+
+.event-img{
+    position:relative;
+    height:260px;
+    overflow:hidden;
+}
+
+.event-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .5s ease;
+}
+
+.event-card:hover .event-img img{
+    transform:scale(1.08);
+}
+
+/* Wave Separator */
+
+.event-img::after{
+    content:"";
+    position:absolute;
+    bottom:-1px;
+    left:0;
+    width:100%;
+    height:70px;
+    background:#fff;
+
+    clip-path: polygon(
+        0 55%,
+        10% 35%,
+        20% 60%,
+        30% 35%,
+        40% 65%,
+        50% 30%,
+        60% 65%,
+        70% 35%,
+        80% 60%,
+        90% 30%,
+        100% 55%,
+        100% 100%,
+        0 100%
+    );
+}
+
+.event-content{
+    padding:25px 25px 35px;
+    text-align:center;
+}
+
+.event-content h3{
+    color:#745141;
+    font-size:2rem;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.event-content ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.event-content ul li{
+    font-size:15px;
+    color:#5E463A;
+    padding:6px 0;
+    line-height:1.5;
+}
+
+/* Scroll Animation */
+
+.service-hidden{
+    opacity:0;
+    transform:translateY(50px);
+}
+
+.service-show{
+    opacity:1;
+    transform:translateY(0);
+    transition:all .8s ease;
+}
+
+/* Tablet */
+
+@media(max-width:991px){
+
+    .services-grid-new{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .event-img{
+        height:220px;
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:767px){
+
+    .services-grid-new{
+        grid-template-columns:1fr;
+    }
+
+    .event-content h3{
+        font-size:1.8rem;
+    }
+
+    .event-img{
+        height:240px;
+    }
+
+}
