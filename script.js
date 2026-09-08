@@ -128,3 +128,33 @@ document.querySelectorAll('.faq-question').forEach(function (btn) {
     }
   });
 });
+
+
+/* ===================================
+   SERVICES ANIMATION
+=================================== */
+
+const serviceCards = document.querySelectorAll('.event-card');
+
+const serviceObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add('service-show');
+        }
+
+    });
+
+},{
+    threshold:0.15
+});
+
+serviceCards.forEach(card => {
+
+    card.classList.add('service-hidden');
+
+    serviceObserver.observe(card);
+
+});
